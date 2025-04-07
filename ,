@@ -1,0 +1,551 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите целое число: ";
+    cin >> number;
+
+    if (number % 2 != 0) {
+        cout << "Число нечетное." << endl;
+    } else {
+        cout << "Число четное." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+
+int main() {
+    int number;
+
+    std::cout << "Введите целое число: ";
+    std::cin >> number;
+
+    if (number % 2 == 0) {
+        std::cout << "Число чётное." << std::endl;
+    } else {
+        std::cout << "Число нечётное." << std::endl;
+    }
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите целое число: ";
+    cin >> number;
+
+    if (abs(number) % 10 == 7) {
+        cout << "Число оканчивается на 7." << endl;
+    } else {
+        cout << "Число не оканчивается на 7." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int number;
+    
+    // Вводим двузначное число
+    cout << "Введите двузначное число: ";
+    cin >> number;
+
+    // Разделяем число на цифры
+    int first_digit = number / 10;  // Первая цифра
+    int second_digit = number % 10; // Вторая цифра
+
+    // Сравниваем цифры
+    if (first_digit > second_digit) {
+        cout << "Первая цифра больше второй." << endl;
+    } else if (first_digit < second_digit) {
+        cout << "Вторая цифра больше первой." << endl;
+    } else {
+        cout << "Цифры равны." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+
+int main() {
+    int number;
+    
+    // Вводим двузначное число
+    std::cout << "Введите двузначное число: ";
+    std::cin >> number;
+    
+    // Извлекаем десятки и единицы
+    int tens = number / 10;  // десятки
+    int ones = number % 10;  // единицы
+    
+    // Проверяем, одинаковы ли цифры
+    if (tens == ones) {
+        std::cout << "Цифры одинаковы." << std::endl;
+    } else {
+        std::cout << "Цифры разные." << std::endl;
+    }
+    
+    return 0;
+}
+.
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int number;
+
+    // Ввод числа
+    cout << "Введите двузначное число: ";
+    cin >> number;
+
+    // Разделяем число на десятки и единицы
+    int tens = number / 10;  // Цифра десятков
+    int ones = number % 10;  // Цифра единиц
+
+    // Считаем сумму цифр
+    int sum = tens + ones;
+
+    // Проверяем, является ли сумма цифр четной
+    if (sum % 2 == 0) {
+        cout << "Сумма цифр числа четная." << endl;
+    } else {
+        cout << "Сумма цифр числа нечетная." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите двузначное число: ";
+    cin >> number;
+
+    // Получаем десятки и единицы числа
+    int tens = number / 10;
+    int ones = number % 10;
+
+    // Суммируем цифры
+    int sum = tens + ones;
+
+    // Проверяем, является ли сумма нечетной
+    if (sum % 2 != 0) {
+        cout << "Сумма цифр нечетная." << endl;
+    } else {
+        cout << "Сумма цифр четная." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите двузначное число: ";
+    cin >> number;
+
+    // Извлекаем десятки и единицы
+    int tens = number / 10;
+    int ones = number % 10;
+
+    // Сумма цифр
+    int sum = tens + ones;
+
+    // Проверка кратности 3
+    if (sum % 3 == 0) {
+        cout << "Сумма цифр числа кратна 3." << endl;
+    } else {
+        cout << "Сумма цифр числа не кратна 3." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, num;
+    
+    // Ввод числа A и двузначного числа
+    cout << "Введите число A: ";
+    cin >> A;
+    
+    cout << "Введите двузначное число: ";
+    cin >> num;
+
+    // Вычисляем сумму цифр двузначного числа
+    int sum_of_digits = (num / 10) + (num % 10);
+    
+    // Проверяем, кратна ли сумма цифр числу A
+    if (sum_of_digits % A == 0) {
+        cout << "Сумма цифр числа " << num << " кратна числу " << A << endl;
+    } else {
+        cout << "Сумма цифр числа " << num << " не кратна числу " << A << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите трехзначное число: ";
+    cin >> number;
+
+    // Извлекаем первую и вторую цифры числа
+    int first_digit = number / 100;          // Первая цифра
+    int second_digit = (number / 10) % 10;   // Вторая цифра
+
+    // Сравниваем первую и вторую цифры
+    if (first_digit > second_digit) {
+        cout << "Первая цифра больше второй." << endl;
+    } else if (first_digit < second_digit) {
+        cout << "Вторая цифра больше первой." << endl;
+    } else {
+        cout << "Первая и вторая цифры равны." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите трехзначное число: ";
+    cin >> number;
+
+    // Получаем первую цифру числа
+    int first_digit = number / 100;
+    
+    // Получаем последнюю цифру числа
+    int last_digit = number % 10;
+
+    // Сравниваем первую и последнюю цифры
+    if (first_digit > last_digit) {
+        cout << "Первая цифра больше последней." << endl;
+    } else if (first_digit < last_digit) {
+        cout << "Последняя цифра больше первой." << endl;
+    } else {
+        cout << "Первая и последняя цифры равны." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите трехзначное число: ";
+    cin >> number;
+
+    // Извлекаем вторую и последнюю цифры
+    int second_digit = (number / 10) % 10;  // Вторая цифра
+    int last_digit = number % 10;           // Последняя цифра
+
+    // Сравниваем их
+    if (second_digit > last_digit) {
+        cout << "Вторая цифра больше." << endl;
+    } else if (second_digit < last_di        cout << "Сумма цифр числа не кратна 3." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, num;
+    
+    // Ввод числа A и двузначного числа
+    cout << "Введите число A: ";
+    cin >> A;
+    
+    cout << "Введите двузначное число: ";
+    cin >> num;
+
+    // Вычисляем сумму цифр двузначного числа
+    int sum_of_digits = (num / 10) + (num % 10);
+    
+    // Проверяем, кратна ли сумма цифр числу A
+    if (sum_of_digits % A == 0) {
+        cout << "Сумма цифр числа " << num << " кратна числу " << A << endl;
+    } else {
+        cout << "Сумма цифр числа " << num << " не кратна числу " << A << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите трехзначное число: ";
+    cin >> number;
+
+    // Извлекаем первую и вторую цифры числа
+    int first_digit = number / 100;          // Первая цифра
+    int second_digit = (number / 10) % 10;   // Вторая цифра
+
+    // Сравниваем первую и вторую цифры
+    if (first_digit > second_digit) {
+        cout << "Первая цифра больше второй." << endl;
+    } else if (first_digit < second_digit) {
+        cout << "Вторая цифра больше первой." << endl;
+    } else {
+        cout << "Первая и вторая цифры равны." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите трехзначное число: ";
+    cin >> number;
+
+    // Получаем первую цифру числа
+    int first_digit = number / 100;
+    
+    // Получаем последнюю цифру числа
+    int last_digit = number % 10;
+
+    // Сравниваем первую и последнюю цифры
+    if (first_digit > last_digit) {
+        cout << "Первая цифра больше последней." << endl;
+    } else if (first_digit < last_digit) {
+        cout << "Последняя цифра больше первой." << endl;
+    } else {
+        cout << "Первая и последняя цифры равны." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите трехзначное число: ";
+    cin >> number;
+
+    // Извлекаем вторую и последнюю цифры
+    int second_digit = (number / 10) % 10;  // Вторая цифра
+    int last_digit = number % 10;           // Последняя цифра
+
+    // Сравниваем их
+    if (second_digit > last_digit) {
+git) {
+        cout << "Последняя цифра больше." << endl;
+    } else {
+        cout << "Вторая и последняя цифры равны." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    
+    cout << "Введите трехзначное число: ";
+    cin >> num;
+    
+    // Извлекаем цифры числа
+    int hundreds = num / 100;       // Сотни
+    int tens = (num / 10) % 10;     // Десятки
+    int ones = num % 10;            // Единицы
+    
+    // Проверяем, все ли цифры одинаковы
+    if (hundreds == tens && tens == ones) {
+        cout << "Все цифры одинаковы." << endl;
+    } else {
+        cout << "Цифры разные." << endl;
+    }
+    
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int M, N;
+    cout << "Введите число M: ";
+    cin >> M;
+    cout << "Введите число N: ";
+    cin >> N;
+
+    if (N != 0) {
+        if (M % N == 0) {
+            cout << "Частное от деления M на N: " << M / N << endl;
+        } else {
+            cout << "M на N нацело не делится" << endl;
+        }
+    } else {
+        cout << "На 0 делить нельзя!" << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Введите число: ";
+    cin >> number;
+
+    // Проверка последней цифры
+    if (number % 10 == 5) {
+        cout << "Число оканчивается на 5." << endl;
+    } else {
+        cout << "Число не оканчивается на 5." << endl;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int month;
+    cout << "Введите номер месяца (от 1 до 12): ";
+    cin >> month;
+
+    switch(month) {
+        case 1: cout << "Январь"; break;
+        case 2: cout << "Февраль"; break;
+        case 3: cout << "Март"; break;
+        case 4: cout << "Апрель"; break;
+        case 5: cout << "Май"; break;
+        case 6: cout << "Июнь"; break;
+        case 7: cout << "Июль"; break;
+        case 8: cout << "Август"; break;
+        case 9: cout << "Сентябрь"; break;
+        case 10: cout << "Октябрь"; break;
+        case 11: cout << "Ноябрь"; break;
+        case 12: cout << "Декабрь"; break;
+        default: cout << "Неверный номер месяца"; break;
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Внешний цикл для строк
+    for (int i = 1; i <= 5; i++) {
+        // Внутренний цикл для вывода чисел
+        for (int j = 1; j <= i; j++) {
+            cout << i << " "; // Выводим число i
+        }
+        cout << endl; // Переход на новую строку после каждой итерации внешнего цикла
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Массив чисел, которые будут выводиться
+    int numbers[] = {8, 7, 6, 5, 4};
+    
+    // Внешний цикл для чисел
+    for (int i = 0; i < 5; ++i) {
+        // Внутренний цикл для вывода каждого числа в соответствующее количество раз
+        for (int j = 0; j < 5 - i; ++j) {
+            cout << numbers[i] << " ";
+        }
+        cout << endl; // Переход на новую строку после каждого ряда чисел
+    }
+
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Внешний цикл для каждой строки
+    for (int i = 1; i <= 5; ++i) {
+        // Внутренний цикл для вывода чисел в каждой строке
+        for (int j = 1; j <= i; ++j) {
+            cout << j << " ";
+        }
+        cout << endl; // Переход на новую строку
+    }
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 5; ++i) { // Внешний цикл для строк
+        for (int j = i; j >= 1; --j) { // Внутренний цикл для чисел в строке
+            cout << j << "\t"; // Выводим число, табуляция между числами
+        }
+        cout << endl; // Переход на новую строку после каждой строки чисел
+    }
+    return 0;
+}
+.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B;
+    
+    // Ввод диапазона
+    cout << "Введите A: ";
+    cin >> A;
+    cout << "Введите B: ";
+    cin >> B;
+    
+    // Проход по диапазону от A до B
+    for (int i = A; i <= B; i++) {
+        // Проверяем, если последняя цифра числа четная
+        if (i % 10 == 0 || i % 10 == 2 || i % 10 == 4 || i % 10 == 6 || i % 10 == 8) {
+            cout << i << endl;  // Выводим число
+        }
+    }
+
+    return 0;
+}
