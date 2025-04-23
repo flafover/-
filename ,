@@ -31,6 +31,7 @@ int main() {
 
     return 0;
 }
+.
 #include <iostream>
 using namespace std;
 
@@ -76,25 +77,22 @@ int main() {
 }
 .
 #include <iostream>
+using namespace std;
 
 int main() {
     int number;
-    
-    // Вводим двузначное число
-    std::cout << "Введите двузначное число: ";
-    std::cin >> number;
-    
-    // Извлекаем десятки и единицы
-    int tens = number / 10;  // десятки
-    int ones = number % 10;  // единицы
-    
-    // Проверяем, одинаковы ли цифры
+    cout << "Введите двузначное число: ";
+    cin >> number;
+
+    int tens = number / 10;
+    int ones = number % 10;
+
     if (tens == ones) {
-        std::cout << "Цифры одинаковы." << std::endl;
+        cout << "Цифры одинаковые." << endl;
     } else {
-        std::cout << "Цифры разные." << std::endl;
+        cout << "Цифры разные." << endl;
     }
-    
+
     return 0;
 }
 .
